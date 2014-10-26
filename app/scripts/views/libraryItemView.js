@@ -10,7 +10,7 @@ function (Marionette, LibraryItemView, templates) {
   return Marionette.ItemView.extend({
     template: templates.library,
     tagName: 'li',
-    className: 'library',
+    className: 'table-view-cell media library',
 
     initialize: function () {
       console.log('initialize: libraryItemView');
