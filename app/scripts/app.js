@@ -13,8 +13,7 @@ function (Marionette, NavController, Routers, Vent, templates) {
 
 	/* Add application regions here */
 	App.addRegions({
-		content: '#content',
-		footer: '#footer'
+		content: '.content'
 	});
 
 	/* Add initializers here */

@@ -16,15 +16,23 @@
     </head>
 
     <body>
-      <header id="header">
+
+      <header class="bar bar-nav">
+        <h1 class="title">Ratchet</h1>
       </header>
-      <div class="wrapper">
-          <div id="content">
-          <!--Body content-->
-          </div>
-      </div>
-      <footer id="footer">
-      </footer>
+
+      <div class="content"></div>
+
+      <nav class="bar bar-tab">
+        <a class="tab-item active" href="#">
+          <span class="icon icon-home"></span>
+          <span class="tab-label">Welcome</span>
+        </a>
+        <a class="tab-item" href="#libraries">
+          <span class="icon icon-list"></span>
+          <span class="tab-label">Libraries</span>
+        </a>
+      </nav>
 
       <!-- build:js scripts/init.js -->
       <script data-main="scripts/init" src="bower_components/requirejs/require.js"></script>
