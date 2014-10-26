@@ -1,4 +1,9 @@
-.hero-unit {
-    margin: 50px auto 0 auto;
-    width: 400px;
+.content {
+  .table-view {
+    border-top: 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
 }

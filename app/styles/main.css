@@ -1,5 +1,8 @@
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/anthony\/dev\/projects\/javascript\/read-list\/app\/styles\/main\.scss}line{font-family:\000031}}
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 400px;
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kiki\/Devs\/projects\/javascript\/read-list\/app\/styles\/main\.scss}line{font-family:\000032}}
+.content .table-view {
+  border-top: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kiki\/Devs\/projects\/javascript\/read-list\/app\/styles\/main\.scss}line{font-family:\000035}}
+.content .table-view:first-child {
+  margin-top: 0;
 }
