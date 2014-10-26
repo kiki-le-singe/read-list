@@ -1,12 +1,12 @@
 define([
   'marionette',
   'views/helloWorldItemView',
-  'views/librariesCompositeView',
+  'views/LibrariesCollectionView',
   'models/helloWorldModel',
   'models/librariesCollection'
 ],
 
-function (Marionette, HelloWorldItemView, LibrariesCompositeView, HelloWorldModel, LibrariesCollection) {
+function (Marionette, HelloWorldItemView, LibrariesCollectionView, HelloWorldModel, LibrariesCollection) {
   'use strict';
 
   var NavController = Marionette.Controller.extend({
@@ -21,7 +21,7 @@ function (Marionette, HelloWorldItemView, LibrariesCompositeView, HelloWorldMode
     },
 
     libraries: function () {
-      return this.contentRegion.show(new LibrariesCompositeView({
+      return this.contentRegion.show(new LibrariesCollectionView({
         collection: new LibrariesCollection()
       }));
     }
