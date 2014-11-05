@@ -4,6 +4,9 @@
 // BASE SETUP //
 ////////////////
 
+// Stubs
+var timeline = require('./stubs/timeline.json');
+
 // Module dependencies.
 var application_root = __dirname,
     express = require('express'), // Web framework
@@ -29,55 +32,10 @@ router.get('/', function(request, response) {
   response.json({ message: 'hooray! welcome to our api!' });
 });
 
-// Get a list of libraries
-router.route('/libraries')
-  .get(function(request, response) {
-    response.json([
-      { 
-        name : 'HTML5 Boilerplate',
-        url : 'http://www.w3.org/TR/html5/'
-      },
-      {
-        name : 'jQuery',
-        url : 'http://jquery.com/'
-      },
-      {
-        name : 'Backbone.js',
-        url : 'http://backbonejs.org/'
-      },
-      {
-        name : 'Marionette.js',
-        url : 'http://marionettejs.com/'
-      },
-      {
-        name : 'Lo-Dash',
-        url : 'http://lodash.com/'
-      },
-      {
-        name : 'Handlebars.js',
-        url : 'http://handlebarsjs.com/'
-      },
-      {
-        name : 'RequireJS',
-        url : 'http://requirejs.org/'
-      },
-      {
-        name : 'Express',
-        url : 'https://www.npmjs.org/package/express'
-      },
-      {
-        name : 'Mocha',
-        url : 'http://visionmedia.github.io/mocha/'
-      },
-      {
-        name : 'Sinon.JS',
-        url : 'http://sinonjs.org/'
-      },
-      {
-        name : 'chaijs',
-        url : 'http://chaijs.com/'
-      }
-    ]); 
+// Get a list of books
+router.route('/libraries').get(function(request, response) {
+  response.json(timeline);
+});
   });
 
 // all of our routes will be prefixed with /api
