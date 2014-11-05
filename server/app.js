@@ -36,7 +36,13 @@ router.get('/', function(request, response) {
 router.route('/libraries').get(function(request, response) {
   response.json(timeline);
 });
+
+// Get a book
+router.route('/book/:id').get(function(request, response) {
+  response.json({
+    "title": "Invincible"
   });
+});
 
 // all of our routes will be prefixed with /api
 app.use('/api', router);
@@ -50,5 +56,3 @@ app.use('/api', router);
 app.listen(port, function() {
   console.log('Express server listening on port %d in %s node', port, app.settings.env);
 });
-
-
