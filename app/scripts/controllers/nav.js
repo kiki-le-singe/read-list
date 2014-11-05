@@ -24,6 +24,11 @@ function (Marionette, HelloWorldItemView, LibrariesCollectionView, HelloWorldMod
       return this.contentRegion.show(new LibrariesCollectionView({
         collection: new LibrariesCollection()
       }));
+    },
+
+    book: function (id) {
+      debugger
+      // TODO: Display BookItemView
     }
   });
 
