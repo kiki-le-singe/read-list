@@ -1,14 +1,14 @@
 define([
   'backbone',
   'json!config/api.json',
-  'models/libraryModel'
+  'models/bookModel'
 ],
 
-function (Backbone, api, LibraryModel) {
+function (Backbone, api, BookModel) {
   'use strict';
 
   return Backbone.Collection.extend({
-    model: LibraryModel,
+    model: BookModel,
     url: api.libraries,
     initialize: function () {
       console.log('initialize: librariesCollection');

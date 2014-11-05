@@ -1,16 +1,16 @@
 define([
   'marionette',
-  'views/libraryItemView',
+  'views/bookItemView',
   'templates'
 ],
 
-function (Marionette, LibraryItemView, templates) {
+function (Marionette, BookItemView, templates) {
   'use strict';
 
   return Marionette.CollectionView.extend({
     tagName: 'ul',
     className: 'table-view libraries',
-    childView: LibraryItemView,
+    childView: BookItemView,
 
     initialize: function () {
       console.log('initialize: librariesCollectionView');
