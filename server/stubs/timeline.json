@@ -1,0 +1,114 @@
+[
+  {
+    "_id": 1,
+    "title": "Invincible",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.",
+    "cover" :{
+      "src": "./images/invincible.jpg"
+    },
+    "published": "2005-08-25",
+    "team": {
+      "writers": [
+        {
+          "firstname": "Robert",
+          "lastname": "Kirkman"
+        }
+      ],
+      "artists": [
+        {
+          "firstname": "Ryan",
+          "lastname": "Ottley"
+        },
+        {
+          "firstname": "Bill",
+          "lastname": "Crabtree"
+        }
+      ]
+    },
+    "comments": 15,
+    "favorites": 102,
+    "type": "comics"
+  },
+  {
+    "_id": 2,
+    "title": "The walking dead",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.",
+    "cover" :{
+      "src": "./images/the-walking-dead.jpeg"
+    },
+    "published": "2005-08-25",
+    "team": {
+      "writers": [
+        {
+          "firstname": "Robert",
+          "lastname": "Kirkman"
+        }
+      ],
+      "artists": [
+        {
+          "firstname": "Tony",
+          "lastname": "Moor"
+        },
+        {
+          "firstname": "Charlie",
+          "lastname": "Adlard"
+        },
+        {
+          "firstname": "Cliff",
+          "lastname": "Rathburn"
+        }
+      ]
+    },
+    "comments": 52,
+    "favorites": 143,
+    "type": "comics"
+  },
+  {
+    "_id": 3,
+    "title": "Boys",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.",
+    "cover" :{
+      "src": "./images/the-boys.jpeg"
+    },
+    "published": "2009-07-24",
+    "team": {
+      "writers": [
+        {
+          "firstname": "Robert",
+          "lastname": "Kirkman"
+        }
+      ],
+      "artists": [
+        {
+          "firstname": "Tony",
+          "lastname": "Aviña"
+        }
+      ]
+    },
+    "comments": 8,
+    "favorites": 11,
+    "type": "comics"
+  },
+  {
+    "_id": 4,
+    "title": "Sun Ken Rock",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.",
+    "cover" :{
+      "src": "./images/sun-ken-rock.jpeg"
+    },
+    "published": "2008-06-11",
+    "team": {
+      "writers": [
+        {
+          "pseudo": "Boichi",
+          "firstname": null,
+          "lastname": null
+        }
+      ],
+      "artists": null
+    },
+    "comments": 128,
+    "favorites": 234,
+    "type": "manga"
+  }
+]
