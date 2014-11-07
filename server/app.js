@@ -4,10 +4,10 @@
 // BASE SETUP //
 ////////////////
 
-// Stubs
+// Stubs //
 var timeline = require('./stubs/timeline.json');
 
-// Module dependencies.
+// Module dependencies //
 var application_root = __dirname,
     express = require('express'), // Web framework
     app = express(), // define server
@@ -20,6 +20,8 @@ var application_root = __dirname,
 app.use(bodyParser());
 // where to serve static content
 app.use(express.static(path.join(application_root, '../app')));
+
+
 
 ////////////////////////
 // ROUTES FOR OUR API //
