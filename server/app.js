@@ -16,6 +16,37 @@ var application_root = __dirname,
     bodyParser = require('body-parser'),
     port = process.env.PORT || 9000; // set our port
 
+// Libraries Database //
+var db = mongoose.connect('mongodb://localhost/libraries');
+
+var book = mongoose.Schema({
+  title: String,
+  text: String,
+  cover: String,
+  published: Date,
+  workers: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Worker'
+  }],
+  comments: Number,
+  favorites: Number,
+  type: String
+});
+
+var worker = mongoose.Schema({
+  firstname: String,
+  lastname: String,
+  pseudonym: String,
+  books: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Book'
+  }],
+  type: String
+});
+
+var Book = mongoose.model('Book', book);
+var Worker = mongoose.model('Worker', worker);
+
 // parses request body and populates request.body
 app.use(bodyParser());
 // where to serve static content
