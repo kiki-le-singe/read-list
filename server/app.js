@@ -71,8 +71,8 @@ router.route('/libraries').get(function(req, res) {
 });
 
 // Get a book
-router.route('/book/:id').get(function(request, response) {
-  response.json({
+router.route('/book/:id').get(function(req, res) {
+  res.json({
     "title": "Invincible"
   });
 });
