@@ -77,6 +77,13 @@ router.route('/book/:id').get(function(req, res) {
   });
 });
 
+// Get all books
+router.route('/books').get(function(req, res) {
+  Book.find().populate('workers').exec(function (err, books) {
+    res.json(books);
+  });
+});
+
 // Save a book
 router.route('/book').post(function(req, res) {
   var book = new Book({
