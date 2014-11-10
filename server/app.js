@@ -46,6 +46,65 @@ router.route('/book/:id').get(function(request, response) {
   });
 });
 
+// Save a book
+router.route('/book').post(function(req, res) {
+  var book = new Book({
+    title: 'Invincible',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.',
+    cover: './images/invincible.jpg',
+    published: new Date(),
+    comments: 15,
+    favorites: 102,
+    type: 'comics'
+  });
+
+  // book.save();
+  book.save(function () {
+    var bookId = book._id;
+
+    var worker = new Worker({
+      firstname: 'Robert',
+      lastname: 'Kirkman',
+      books: bookId,
+      type: 'writer'
+    });
+
+    var worker2 = new Worker({
+      firstname: 'Ryan',
+      lastname: 'Ottley',
+      books: bookId,
+      type: 'artist'
+    });
+
+    var worker3 = new Worker({
+      firstname: 'Bill',
+      lastname: 'Crabtree',
+      books: bookId,
+      type: 'artist'
+    });
+
+    worker.save(function () {
+      book.workers.push(worker);
+      book.save();
+      console.log("\n" + worker + ' saved');
+    });
+
+    worker2.save(function () {
+      book.workers.push(worker2);
+      book.save();
+      console.log("\n" + worker + ' saved');
+    });
+
+    worker3.save(function () {
+      book.workers.push(worker3);
+      book.save();
+      console.log("\n" + worker + ' saved');
+    });
+
+    res.send('processing the login form!');
+  });
+});
+
 // all of our routes will be prefixed with /api
 app.use('/api', router);
 
