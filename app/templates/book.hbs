@@ -1,29 +1,37 @@
-<a href="#book/1">
-  <img class="media-object pull-left" width="120" height="200" src="{{cover.src}}">
+<a href="#book/{{_id}}">
+  <img class="media-object pull-left" width="120" height="200" src="{{cover}}">
   <div class="media-body">
     {{title}} - <span class="book--published">{{published}}</span> - <span class="book--type">{{type}}</span>
     <p>{{text}}</p>
 
     <div class="book--team">
       <div class="book--writers">
-        {{#each team.writers}}
-          <span class="book--writer">
-          {{#if pseudo}}
-            {{pseudo}}
-          {{else}}
-            {{firstname}} {{lastname}}
-          {{/if}}
-          </span>
+        {{#each workers}}
+          {{#is type 'writer'}}
+            <span class="book--writer">
+            {{#if pseudo}}
+              {{pseudo}}
+            {{else}}
+              {{firstname}} {{lastname}}
+            {{/if}}
+            </span>
+          {{/is}}
         {{/each}}
       </div>
 
-      {{#if team.artists}}
-        <div class="book--artists">
-          {{#each team.artists}}
-            <span class="book--artist">{{firstname}} {{lastname}}</span>
-          {{/each}}
-        </div>
-      {{/if}}
+      <div class="book--artists">
+        {{#each workers}}
+          {{#is type 'artist'}}
+            <span class="book--artist">
+            {{#if pseudo}}
+              {{pseudo}}
+            {{else}}
+              {{firstname}} {{lastname}}
+            {{/if}}
+            </span>
+          {{/is}}
+        {{/each}}
+      </div>
     </div>
   </div>
 
