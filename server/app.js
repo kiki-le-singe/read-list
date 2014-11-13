@@ -65,11 +65,6 @@ router.get('/', function(req, res) {
   res.json({ message: 'hooray! welcome to our api!' });
 });
 
-// Get a list of books
-router.route('/libraries').get(function(req, res) {
-  res.json(timeline);
-});
-
 // Get a book
 router.route('/book/:id').get(function(req, res) {
   res.json({
