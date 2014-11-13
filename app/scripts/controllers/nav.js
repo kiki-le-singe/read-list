@@ -1,12 +1,12 @@
 define([
   'marionette',
   'views/helloWorldItemView',
-  'views/LibrariesCollectionView',
+  'views/booksCollectionView',
   'models/helloWorldModel',
-  'models/librariesCollection'
+  'models/booksCollection'
 ],
 
-function (Marionette, HelloWorldItemView, LibrariesCollectionView, HelloWorldModel, LibrariesCollection) {
+function (Marionette, HelloWorldItemView, BooksCollectionView, HelloWorldModel, BooksCollection) {
   'use strict';
 
   var NavController = Marionette.Controller.extend({
@@ -20,9 +20,9 @@ function (Marionette, HelloWorldItemView, LibrariesCollectionView, HelloWorldMod
       }));
     },
 
-    libraries: function () {
-      return this.contentRegion.show(new LibrariesCollectionView({
-        collection: new LibrariesCollection()
+    books: function () {
+      return this.contentRegion.show(new BooksCollectionView({
+        collection: new BooksCollection()
       }));
     },
 

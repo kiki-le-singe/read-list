@@ -9,11 +9,11 @@ function (Marionette, BookItemView, templates) {
 
   return Marionette.CollectionView.extend({
     tagName: 'ul',
-    className: 'table-view libraries',
+    className: 'table-view books',
     childView: BookItemView,
 
     initialize: function () {
-      console.log('initialize: librariesCollectionView');
+      console.log('initialize: booksCollectionView');
       this.collection.fetch();
     }
   });

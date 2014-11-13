@@ -1,4 +1,4 @@
 {
-	"libraries" : "/api/libraries",
+	"books" : "/api/books",
 	"book" : "/api/book/:id"
 }

@@ -9,9 +9,9 @@ function (Backbone, api, BookModel) {
 
   return Backbone.Collection.extend({
     model: BookModel,
-    url: api.libraries,
+    url: api.books,
     initialize: function () {
-      console.log('initialize: librariesCollection');
+      console.log('initialize: booksCollection');
     }
   });
 });
