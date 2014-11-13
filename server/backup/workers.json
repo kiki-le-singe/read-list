@@ -1,0 +1,8 @@
+{"_id":{ "$oid": "54612a3a97d3df5703db813a" },"firstname":"Robert","lastname":"Kirkman","type":"writer","books":[{ "$oid": "54612a3a97d3df5703db8139" }],"__v":0}
+{"_id":{ "$oid": "54612a3a97d3df5703db813b" },"firstname":"Ryan","lastname":"Ottley","type":"artist","books":[{ "$oid": "54612a3a97d3df5703db8139" }],"__v":0}
+{"_id":{ "$oid": "54612a3a97d3df5703db813c" },"firstname":"Bill","lastname":"Crabtree","type":"artist","books":[{ "$oid": "54612a3a97d3df5703db8139" }],"__v":0}
+{"_id":{ "$oid": "54612da4684a1e6103489d74" },"firstname":"Tony","lastname":"Moor","type":"artist"}
+{"_id":{ "$oid": "54612dbb684a1e6103489d75" },"firstname":"Charlie","lastname":"Adlard","type":"artist"}
+{"_id":{ "$oid": "54612dcd684a1e6103489d76" },"firstname":"Cliff","lastname":"Rathburn","type":"artist"}
+{"_id":{ "$oid": "54612dfb684a1e6103489d77" },"firstname":"Tony","lastname":"Aviña","type":"artist"}
+{"_id":{ "$oid": "54612e71684a1e6103489d79" },"pseudo":"Boichi","type":"writer"}
