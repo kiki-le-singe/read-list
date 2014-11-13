@@ -77,6 +77,7 @@ router.route('/books').get(function(req, res) {
   Book.find().populate('workers').exec(function (err, books) {
     res.json(books);
   });
+  // Stub: res.json(timeline);
 });
 
 // Save a book
