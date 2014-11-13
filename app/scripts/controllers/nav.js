@@ -21,8 +21,10 @@ function (Marionette, HelloWorldItemView, BooksCollectionView, HelloWorldModel, 
     },
 
     books: function () {
+      var books = new BooksCollection();
+      books.fetch();
       return this.contentRegion.show(new BooksCollectionView({
-        collection: new BooksCollection()
+        collection: books
       }));
     },
 

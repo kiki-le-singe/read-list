@@ -14,7 +14,6 @@ function (Marionette, BookItemView, templates) {
 
     initialize: function () {
       console.log('initialize: booksCollectionView');
-      this.collection.fetch();
     }
   });
 });
