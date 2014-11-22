@@ -14,7 +14,9 @@ var application_root = __dirname,
     path = require('path'), // Utilities for dealing with file paths
     mongoose = require('mongoose'), //MongoDB integration
     bodyParser = require('body-parser'),
-    port = process.env.PORT || 9000; // set our port
+    port = process.env.PORT || 9000, // set our port
+    args = process.argv,
+    stubArg = (args[2] === 'true');
 
 // Libraries Database //
 var db = mongoose.connect('mongodb://localhost/libraries');
@@ -74,10 +76,13 @@ router.route('/book/:id').get(function(req, res) {
 
 // Get all books
 router.route('/books').get(function(req, res) {
+  if (stubArg) { // if stub enabled
+    return res.json(timeline);
+  }
+
   Book.find().populate('workers').exec(function (err, books) {
     res.json(books);
   });
-  // Stub: res.json(timeline);
 });
 
 // Save a book
