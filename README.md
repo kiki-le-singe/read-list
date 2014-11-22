@@ -77,3 +77,7 @@ Handlebars helpers is located in `/app/scripts/helpers`
 ## Sources
 
  * [marionette-boilerplate](https://github.com/kiki-le-singe/marionette-boilerplate.git): **read-list** is based on it
+
+## Tips and tricks
+
+ * [mongo-express](https://www.npmjs.org/package/mongo-express): If you use MongoDB, look at this node modules. It's an convenient admin interface for MongoDB.
